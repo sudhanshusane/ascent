@@ -1,25 +1,27 @@
 [
-  {
-    "action": "add_scenes",
-    "scenes": 
-    {
-      "s1": 
-      {
-        "plots": 
-        {
-          "p1": 
-          {
-            "type": "volume",
+ 	{   
+      "action": "add_pipelines",
+      "pipelines": 
+      {   
+        "pl1": 
+        {   
+          "f1": 
+          {   
+            "type": "lagrangian",
             "params": 
-            {
-              "field": "energy"
-            }
-          }
-        }
-      }
-    }
-  },
-  
+            {   
+              "field": "velocity",
+              "step_size": 0.04,
+							"write_frequency": 10,
+							"cust_res":1,
+							"x_res":2,
+							"y_res":2,
+							"z_res":2
+            }   
+          }   
+       }   
+     }   
+   }, 
   {
     "action": "execute"
   },
